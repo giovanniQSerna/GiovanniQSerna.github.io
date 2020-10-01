@@ -16,16 +16,35 @@
             height: 100%;
             width: 56%;
             float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }#right_pane{
-                background-color: blue;
-                height: 100%;
-                width: 44%;
-                float: left;
+            background-color: blue;
+            height: 100%;
+            width: 44%;
+            float: left;
         }#story_text{
-                background-color: yellow;
-                height: 70%;
+            background-color: yellow;
+            height: 70%;
         }#story_choices{
-
+            background-color: pink;
+            height: 20%;
+            align: center;
+            justify-content: center;
+        }#story_img{
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        } .buttons{
+            text-decoration: none;
+            color:white;
+            background-color: black;
+            padding: 5px;
+            border-radius: 8px;
+            font-size: 15px;
+            margin: 10px;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="css/style.css"
@@ -47,10 +66,21 @@
     </ul>
     
       <div id="container">
-        <div id="left_pane"></div>
+        <div id="left_pane">
+            <img id="story_img" src="images/">
+        
+        </div>
         <div id="right_pane">
-            <div id="story_text"></div>
-            <div id="button_choices"></div>
+            <div id="story_text">
+                <p>hello</p>
+                <p>whhwhwhw</p>
+                <p>meowing</p>
+            </div>
+            <div id="button_choices">
+                <a class="buttons">yesn't</a>
+                <a class="buttons">no</a>
+            
+            </div>
         </div>
     </body>
 </html>
