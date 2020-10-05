@@ -30,7 +30,7 @@
         }#story_choices{
             background-color: pink;
             height: 20%;
-            align: center;
+            align-items: center;
             justify-content: center;
         }#story_img{
             max-height: 100%;
@@ -47,7 +47,7 @@
             margin: 10px;
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="css/style.css"
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <body>
     <ul class="navbar">
@@ -72,15 +72,40 @@
         </div>
         <div id="right_pane">
             <div id="story_text">
-                <p>hello</p>
-                <p>whhwhwhw</p>
-                <p>meowing</p>
+                <p id="p1">hello</p>
+                <p id="p2">whhwhwhw</p>
+                <p id="p3">meowing</p>
             </div>
-            <div id="button_choices">
-                <a class="buttons">yesn't</a>
-                <a class="buttons">no</a>
+            <div id="story_choices">
+                <a id="b1" class="buttons" onclick="(1)">yesn't</a>
+                <a id="b2" class="buttons" onclick="(2)">no</a>
+                <a id="b3" class="buttons" onclick="(3)">yesn't</a>
+                <a id="b4" class="buttons" onclick="(4)">no</a>
             
             </div>
         </div>
+
+        <script>
+            var b1 = document.getElementryId(b1);
+            var b2 = document.getElementryId(b2);
+            var b3 = document.getElementryId(b3);
+            var b4 = document.getElementryId(b4);
+            var img = document.getElementryId(story_image);
+            var p1 = document.getElementryId(p1);
+            var p2 = document.getElementryId(p2);
+            var p3 = document.getElementryId(p3);
+            var state = "intro";
+
+            function intro(){
+              img.src = "images/suit.jpg"
+              b1.innerHTML = "stay in school"
+              b2.innerHTML = "go to camp"
+              b3.style.display = "none";
+              b4.style.display = "none";
+
+            }
+
+
+        </script>
     </body>
 </html>
