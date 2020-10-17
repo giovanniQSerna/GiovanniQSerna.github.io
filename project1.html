@@ -79,7 +79,7 @@
             <div id="story_choices">
                 <a id="b1" class="buttons" href="#" onclick="bclick(1)">swipe Card</a>
                 <a id="b2" class="buttons" href="#" onclick="bclick(2)">calibrate Distributor</a>
-                <a id="b3" class="buttons" href="#" onclick="bclick(3)"></a>
+                <a id="b3" class="buttons" href="#" onclick="bclick(3)">continue</a>
                 <a id="b4" class="buttons" href="#" onclick="bclick(4)"></a>
             
             </div>
@@ -110,23 +110,42 @@
             } 
             
             function swipeCard(){
-                img.src ="images/among.jpg1"
+                img.src ="images/swipe.jpg"
                 p1.innerHTML = ""
-                p2.innerHTML = "you've swiped successfully"
+                p2.innerHTML = "you've swiped successfully along with your fellow crewmates"
                 p3.innerHTML = ""
-                p1.innerHTML = "";
+                b1.style.display = "none";
+                b2.style.display = "none";
+                b3.style.display = "continue";
+                b3.style.display = "block";
                 p1.innerHTML = ""
                 p1.innerHTML = ""
             }
-            function meow(){
-                img.src =""
+            function calibrateDistributor(){
+                img.src ="images/Death.jpg"
+                p1.innerHTML = ""
+                p2.innerHTML = "u died after many failures and the impostor found ya and killed ya"
+                p3.innerHTML = ""
+                b1.innerHTML = "retry?";
+                b2.innerHTML = ""
+                b2.style.display = "none";
+                p1.innerHTML = ""
+            }
+            function Continue(){
+                img.src = ""
                 p1.innerHTML = ""
                 p2.innerHTML = ""
                 p3.innerHTML = ""
-                p1.innerHTML = "";
-                p1.innerHTML = ""
-                p1.innerHTML = ""
+                b1.innerHTML = ""
+                b2.innerHTML = ""
+                b3.innerHTML = ""
+
+
+
+
+
             }
+            
 
 
 
@@ -138,16 +157,22 @@
                             state= "swipe Card";
                 }
                 else if(button == 2){
-                    otp1()
-                    state = "calibarate Distributor";
+                    calibrateDistributor()
+                    state = "calibarateDistributor";
                         
                         if(button == 1){
                             opt2();
                         state = "meow"
                     }
-                    else if(button == 2){
+                    else if(state == "swipeCard"){
                         intensetraining();
                         state = "intensetraining"
+                    }
+                    else if(state == "swipeCard"){
+                        if(button == 3){
+                        Continue();
+                        state = "Continue";
+                        }
                     }
                 }
             }
