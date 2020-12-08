@@ -80,7 +80,7 @@
                 <a id="b1" class="buttons" href="#" onclick="bclick(1)">swipe Card</a>
                 <a id="b2" class="buttons" href="#" onclick="bclick(2)">calibrate Distributor</a>
                 <a id="b3" class="buttons" href="#" onclick="bclick(3)">continue</a>
-                <a id="b4" class="buttons" href="#" onclick="bclick(4)"></a>
+                <a id="b4" class="buttons" href="#" onclick="bclick(4)">retry?</a>
             
             </div>
         </div>
@@ -124,16 +124,18 @@
             function calibrateDistributor(){
                 img.src ="images/Death.jpg"
                 p1.innerHTML = ""
-                p2.innerHTML = "u died after many failures and the impostor found ya and killed ya"
+                b1.style.display = "none";
+                p2.innerHTML = "you died after many failures and the impostor found ya and killed ya"
                 p3.innerHTML = ""
-                b1.innerHTML = "retry?";
+                b4.innerHTML = "retry?";
+                b4.style.display = "block";
                 b2.innerHTML = ""
                 b2.style.display = "none";
                 p1.innerHTML = ""
             }
             function Continue(){
                 img.src = ""
-                p1.innerHTML = ""
+                p1.innerHTML = "jejjejeje"
                 p2.innerHTML = ""
                 p3.innerHTML = ""
                 b1.innerHTML = ""
@@ -160,19 +162,24 @@
                     calibrateDistributor()
                     state = "calibarateDistributor";
                         
-                        if(button == 1){
-                            opt2();
-                        state = "meow"
+                    if(button == 1){
+                        calibrateDistributor();{
+                        skeld();
+                        state = "skeld";
+                        }    
+                    
+
                     }
                     else if(state == "swipeCard"){
-                        intensetraining();
+                        //intensetraining();
                         state = "intensetraining"
                     }
                     else if(state == "swipeCard"){
                         if(button == 3){
                         Continue();
                         state = "Continue";
-                        }
+                    }
+
                     }
                 }
             }
